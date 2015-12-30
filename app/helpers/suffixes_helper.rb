@@ -1,0 +1,2 @@
+module SuffixesHelper
+end

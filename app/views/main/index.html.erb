@@ -1,0 +1,15 @@
+<div ng-app="app" ng-controller="appCtrl">
+	<h1 class="atlas-font">NAZWEX</h1>
+	<div class="panel">
+		<form>
+			Rodzaj działalności:
+			<select ng-model="form.type">
+				<option ng-repeat="(key, value) in resp" value="{{value.id}}">{{value.name}}</option>
+			</select> <br>
+			Nazwa trójczłonowa <input type="checkbox" ng-model="form.tripart"> Tryb międzynarodowy <input type="checkbox" ng-model="form.euro">  Ponowne otwarcie <input type="checkbox" ng-model="form.bis"><br />
+			<input type="text" ng-disabled="!form.tripart" placeholder="Imię właściciela" ng-model="form.name">
+			<button id="confirm" ng-click="confirm()">Generuj</button>
+		</form>
+		<p class="atlas-font">{{yourNazwex}}</p>
+	</div>
+</div>
